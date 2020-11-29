@@ -21,7 +21,7 @@ export type StateType = ReturnType<typeof useDefaultState>;
 type DefaultType = ReturnType<typeof _default>;
 
 export default function _default(
-  state: StateType,
+  state?: StateType,
   channelKey: string = "channel"
 ) {
   const _state = state || useDefaultState();
@@ -37,7 +37,7 @@ export default function _default(
   function updateMessage(message: string) {
     if (!message) {
       _callMessageHandlers(message);
-      return;
+      return self;
     }
 
     try {
@@ -45,12 +45,12 @@ export default function _default(
       const channelName = json[channelKey];
       if (!channelName) {
         _callMessageHandlers(message);
-        return;
+        return self;
       }
       const ls = _state.channelHandlers[channelName];
       if (!ls) {
         _callMessageHandlers(message);
-        return;
+        return self;
       }
 
       const param = {
@@ -61,6 +61,8 @@ export default function _default(
     } catch {
       _callMessageHandlers(message);
     }
+
+    return self;
   }
 
   function _callMessageHandlers(message: string) {

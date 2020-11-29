@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "node ./dist/index.js",
+    "demo": "ts-node",
     "build": "webpack --config webpack.config.js",
     "package": "npm run build && npm pack && tar -xvf json-channel-1.0.0.tgz",
     "test": "jest"
@@ -21,6 +21,7 @@
     "jest": "^25.5.4",
     "ts-jest": "^25.5.1",
     "ts-loader": "^8.0.4",
+    "ts-node": "^9.0.0",
     "typescript": "^3.9.7",
     "webpack": "^5.0.0",
     "webpack-cli": "^4.0.0"
