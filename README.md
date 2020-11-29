@@ -33,7 +33,7 @@ const useJsonChannel = require("json-channel")
 
 ### 2. add callbacks
 
-```
+```ts
 const jsonChannel = useJsonChannel()
   .addOnChannel("hello", param => {})
   .addOnOtherMessage(param => {})
@@ -41,7 +41,7 @@ const jsonChannel = useJsonChannel()
 
 ### 3. sort message
 
-```
+```ts
 //call callback set in addOnChannel("hello")
 jsonChannel.updateMessage(JSON.stringify({
   channel: "hello",
