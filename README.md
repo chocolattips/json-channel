@@ -3,8 +3,8 @@ Sort JSON with channel.
 ## demo
 
 ### setup
-download this repository.
 ```
+cd path/to/json-channel
 npm install
 ```
 
