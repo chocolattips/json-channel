@@ -1,13 +1,14 @@
 Sort JSON with channel.
 
-## install
+## demo
 
+### setup
+download this repository.
 ```
 npm install
 ```
 
-## demo
-
+### run
 ```
 npm run demo -- demo/demo-1.ts
 ```
@@ -17,7 +18,17 @@ npm run demo -- demo/demo-1.ts
 ### 1. import
 
 ```
+npm install path/to/json-channel
+```
+
+#### TypeScript
+```ts
 import useJsonChannel from "json-channel"
+```
+
+#### JavaScript
+```js
+const useJsonChannel = require("json-channel")
 ```
 
 ### 2. add callbacks
